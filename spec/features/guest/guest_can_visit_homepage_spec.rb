@@ -9,7 +9,7 @@ describe "As a guest, when I visit '/'" do
       expect(page).to have_link("How It Works")
     end
     within(".nav-bar") do
-      expect(page).to have_link("SiteName")
+      expect(page).to have_link("MachineLearnSongs")
     end
   end
 end
