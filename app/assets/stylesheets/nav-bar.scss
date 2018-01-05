@@ -1,0 +1,18 @@
+@import 'variables';
+
+.nav-bar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 100%;
+  background-color: $darker-gray;
+  .site-title {
+    position: absolute;
+    top: 25%;
+    left: 10px;
+    font-size: 20px;
+    color: $spotify-green;
+  }
+}

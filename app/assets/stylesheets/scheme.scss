@@ -1,0 +1,8 @@
+@import 'variables';
+
+body {
+  display: flex;
+  font-family: $base-font;
+  color: $base-text-color;
+  background-color: $bg-color;
+}
