@@ -5,7 +5,7 @@ class SessionController < ApplicationController
       conn = Faraday.new(url: "https://accounts.spotify.com")
       response = conn.post do |req|
         req.url "/api/token"
-        req.body = "client_id=#{ENV['client_id']}&client_secret=#{ENV['client_secret']}&grant_type=authorization_code&code=#{params[:code]}&redirect_uri=http://localhost:3000/spotify/callback"
+        req.body = "client_id=#{ENV['client_id']}&client_secret=#{ENV['client_secret']}&grant_type=authorization_code&code=#{params[:code]}&redirect_uri=#{ENV['base_url']}/spotify/callback"
       end
       raw_user_tokens = JSON.parse(response.body, symbolize_names: true)
 
