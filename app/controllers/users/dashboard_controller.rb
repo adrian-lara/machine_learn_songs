@@ -7,7 +7,8 @@ class Users::DashboardController < ApplicationController
       req.headers['Authorization'] = "Bearer #{current_user.access_token}"
     end
     raw_song_data = JSON.parse(response.body, symbolize_names: true)
-    @song_info = raw_song_data[:item][:name] + " by " + raw_song_data[:item][:artists].first[:name]
+
+    @song = Song.new(raw_song_data)
   end
 
 end
