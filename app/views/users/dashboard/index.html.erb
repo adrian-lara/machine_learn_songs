@@ -1,5 +1,8 @@
 <div class="dashboard">
-  <h4>Welcome <%= current_user.uid %>!</h4>
+  <h3>Welcome <%= current_user.uid %>!</h4>
 
-  <p>Currently Playing: <%= @song.title %> by <%= @song.artists %></p>
+  <h5>Currently Playing</h5>
+  <div class="currently-playing">
+    <%= render partial: "currently-playing" %>
+  </div>
 </div>

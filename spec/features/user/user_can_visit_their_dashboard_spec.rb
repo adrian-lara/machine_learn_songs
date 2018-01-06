@@ -15,8 +15,18 @@ describe "As a logged in user, when I visit my dashboard" do
 
       expect(current_path).to eq(dashboard_path)
       expect(page).to have_content(user.uid)
-      expect(page).to have_content("Kendrick Lamar")
-      expect(page).to have_content("LUST.")
+      within(".currently-playing") do
+        expect(page).to have_css("img[src='https://i.scdn.co/image/70429aaeceb7f8f6c087133382728223e0004b29']")
+        within(".artists") do
+          expect(page).to have_content("Kendrick Lamar")
+        end
+        within(".song-title") do
+          expect(page).to have_content("LUST.")
+        end
+        within(".album-title") do
+          expect(page).to have_content("DAMN")
+        end
+      end
     end
   end
 end

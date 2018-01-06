@@ -4,5 +4,6 @@ body {
   display: flex;
   font-family: $base-font;
   color: $base-text-color;
+  text-shadow: 2px 2px 4px black;
   background-color: $bg-color;
 }

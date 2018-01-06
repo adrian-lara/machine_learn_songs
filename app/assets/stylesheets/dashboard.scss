@@ -3,4 +3,37 @@
 .dashboard {
   position: absolute;
   top: 10%;
+  width: 80%;
+  left: 10%;
+  .currently-playing {
+    background-color: $darker-gray;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1.5px white;
+
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    .album-cover {
+      display: flex;
+      border-radius: 5px;
+      width: 20%;
+      height: 20%;
+    }
+    .track-info {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      font-size: 20px;
+      .artists {
+        margin: 14px;
+      }
+      .album-title {
+        margin: 14px;
+      }
+      .song-title {
+        margin: 14px;
+      }
+    }
+  }
 }
