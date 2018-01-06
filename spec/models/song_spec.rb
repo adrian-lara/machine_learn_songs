@@ -6,6 +6,7 @@ describe Song do
     before(:each) do
       @song = Song.new({ item:
         { name: "FEEL.",
+          id: "1337",
           artists: [{
             name: "Kendrick Lamar"
             }],
@@ -15,6 +16,12 @@ describe Song do
           },
         }
       })
+    end
+
+    describe "#track_id" do
+      it "returns the track_id of the song" do
+        expect(@song.track_id).to eq("1337")
+      end
     end
 
     describe "#title" do
