@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :song do
+    sequence(:song_id) { |n| "id_#{n}" }
     sequence(:title) { |n| "title_#{n}" }
     sequence(:artists) { |n| "artist_#{n}" }
     sequence(:album) { |n| "album_#{n}" }
