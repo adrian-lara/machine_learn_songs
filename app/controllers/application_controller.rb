@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-    @current_user ||= User.find(session[:user_id])
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
   def refresh_access_token
@@ -16,4 +16,14 @@ class ApplicationController < ActionController::Base
 
     current_user.update(access_token: raw_user_tokens[:access_token])
   end
+
+  def check_user
+    render_404 unless current_user
+  end
+
+  private
+
+    def render_404
+      raise ActionController::RoutingError.new("Page Does Not Exist.")
+    end
 end
