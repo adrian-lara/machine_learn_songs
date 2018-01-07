@@ -1,4 +1,5 @@
 class Users::DashboardController < ApplicationController
+  before_action :check_user
 
   def index
     conn = Faraday.new("https://api.spotify.com")
