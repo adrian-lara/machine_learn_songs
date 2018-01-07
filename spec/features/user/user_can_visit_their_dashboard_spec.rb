@@ -29,4 +29,21 @@ describe "As a logged in user, when I visit my dashboard" do
       end
     end
   end
+
+  it "then I see a message telling me to play a song if I'm not currently playing a song" do
+    VCR.use_cassette("user_dashboard_no_song") do
+      user = create(:user,
+        uid: "aid",
+        access_token: ENV["access_token"],
+        refresh_token: ENV["refresh_token"],
+        token_type: "Bearer"
+      )
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+      visit '/dashboard'
+      within(".currently-playing") do
+        expect(page).to have_content("Play a song on Spotify!")
+      end
+    end
+  end
 end
