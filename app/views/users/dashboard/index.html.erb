@@ -3,6 +3,10 @@
 
   <h5>Currently Playing</h5>
   <div class="currently-playing">
-    <%= render partial: "currently-playing" %>
+    <% if @song %>
+      <%= render partial: "currently-playing" %>
+    <% else %>
+      <%= "Play a song on Spotify!" %>
+    <% end %>
   </div>
 </div>
