@@ -7,11 +7,14 @@
   left: 0;
   height: 10%;
   width: 100%;
+
+  align-items: center;
+  justify-content: flex-end;
+
   background-color: $darker-gray;
   .footer-link {
-    position: absolute;
-    top: 25%;
-    right: 5%;
+    margin: 30px;
+    font-size: 20px;
     color: $spotify-green;
   }
 }

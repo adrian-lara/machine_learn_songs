@@ -7,12 +7,13 @@
   left: 0;
   height: 10%;
   width: 100%;
+
+  align-items: center;
+
   background-color: $darker-gray;
   .site-title {
-    position: absolute;
-    top: 25%;
-    left: 10px;
-    font-size: 20px;
+    margin: 20px;
+    font-size: 25px;
     color: $spotify-green;
   }
 }
