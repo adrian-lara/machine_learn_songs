@@ -10,10 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180104224343) do
+ActiveRecord::Schema.define(version: 20180107225209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "track_characters", force: :cascade do |t|
+    t.string "track_id"
+    t.float "acousticness"
+    t.float "danceability"
+    t.integer "duration_ms"
+    t.float "energy"
+    t.float "instrumentalness"
+    t.integer "key"
+    t.float "liveness"
+    t.float "loudness"
+    t.integer "mode"
+    t.float "speechiness"
+    t.float "tempo"
+    t.integer "time_signature"
+    t.float "valence"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_track_characters", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "track_character_id"
+    t.integer "assessment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["track_character_id"], name: "index_user_track_characters_on_track_character_id"
+    t.index ["user_id"], name: "index_user_track_characters_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "uid"
@@ -24,4 +53,6 @@ ActiveRecord::Schema.define(version: 20180104224343) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "user_track_characters", "track_characters"
+  add_foreign_key "user_track_characters", "users"
 end
