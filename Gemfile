@@ -26,6 +26,7 @@ group :development, :test do
   gem 'launchy'
   gem 'vcr'
   gem 'webmock'
+  gem 'bullet'
 end
 
 group :development do
