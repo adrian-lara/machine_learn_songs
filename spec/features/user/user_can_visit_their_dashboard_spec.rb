@@ -44,6 +44,10 @@ describe "As a logged in user, when I visit my dashboard" do
       within(".currently-playing") do
         expect(page).to have_content("Play a song on Spotify!")
       end
+      within(".nav-bar") do
+        expect(page).to have_link("Dashboard")
+        expect(page).to have_link("Log Out")
+      end
     end
   end
 end
