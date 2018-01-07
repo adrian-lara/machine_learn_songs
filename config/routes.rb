@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get "/dashboard", to: "users/dashboard#index", as: :dashboard
 
+  post "/track_characters", to: "users/track_characters#create", as: :save_track
+
 end

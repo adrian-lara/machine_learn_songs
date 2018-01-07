@@ -4,3 +4,15 @@
   <div class="album-title"><%= @song.album %></div>
   <div class="song-title"><%= @song.title %></div>
 </div>
+<div class="like-dislike">
+  <% if @song.assessment %>
+    <span><%= @song.assessment %>d!</span>
+  <% else %>
+    <span class='link like-link'>
+      <%= link_to "Like", save_track_path(user: current_user.id, track_id: @song.track_id, assessment: 0), method: :post %>
+    </span>
+    <span class='link dislike-link'>
+      <%= link_to "Dislike", save_track_path(user: current_user.id, track_id: @song.track_id, assessment: 1), method: :post %>
+    </span>
+  <% end %>
+</div>
