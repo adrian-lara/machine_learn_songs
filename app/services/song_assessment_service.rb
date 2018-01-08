@@ -2,7 +2,7 @@ class SongAssessmentService
 
   def self.assess(user, track_id, assessment)
     data = get_audio_features(user, track_id)
-    track_character = create_track_character(data)
+    track_character = find_or_create_track_character(data)
     create_user_track_character(track_character, user, assessment)
   end
 
@@ -13,7 +13,10 @@ class SongAssessmentService
       service.get_audio_features(track_id)
     end
 
-    def self.create_track_character(data)
+    def self.find_or_create_track_character(data)
+      track_character = TrackCharacter.find_by(track_id: data[:id])
+      return track_character if track_character
+
       TrackCharacter.create({
         track_id: data[:id],
         acousticness: data[:acousticness],
