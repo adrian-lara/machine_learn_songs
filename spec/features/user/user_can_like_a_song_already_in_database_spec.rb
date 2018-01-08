@@ -23,6 +23,16 @@ describe "As a registered user (that's currently playing a song on Spotify) that
         expect(TrackCharacter.count).to eq(track_before_count)
         expect(UserTrackCharacter.count).to eq(user_track_before_count + 1)
         expect(UserTrackCharacter.last.assessment).to eq("Like")
+        expect(UserTrackCharacter.last.user_id).not_to be nil
+        expect(UserTrackCharacter.last.track_character_id).not_to be nil
+
+        within(".currently-playing") do
+          within(".like-dislike") do
+            expect(page).to have_content("Liked!")
+            expect(page).not_to have_link("Like")
+            expect(page).not_to have_link("Dislike")
+          end
+        end
       end
     end
   end
