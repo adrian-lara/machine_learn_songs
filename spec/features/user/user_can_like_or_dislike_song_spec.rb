@@ -28,12 +28,12 @@ describe "As a registered user (that's currently playing a song on Spotify) that
         expect(TrackCharacter.count).to eq(track_before_count + 1)
         expect(UserTrackCharacter.count).to eq(user_track_before_count + 1)
 
-        track_character = TrackCharacter.find_by(track_id: "asdfasdf")
+        track_character = TrackCharacter.find_by(track_id: "4PpuH4mxL0rD35mOWaLoKS")
         expect(track_character.user_track_characters.first.assessment).to eq("Like")
       end
     end
 
-    it "text" do
+    it "Then I see 'Liked' instead of the Like and Dislike links, and I'm still on the dashboard" do
       VCR.use_cassette("user_likes_song") do
         user = create(:user,
           access_token: ENV['access_token'],
@@ -43,10 +43,11 @@ describe "As a registered user (that's currently playing a song on Spotify) that
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
         visit '/dashboard'
+        click_on "Like"
 
         within(".currently-playing") do
           within(".like-dislike") do
-            expect(page).to have_content("Liked")
+            expect(page).to have_content("Liked!")
             expect(page).not_to have_link("Like")
             expect(page).not_to have_link("Dislike")
           end
