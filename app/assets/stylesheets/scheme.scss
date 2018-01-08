@@ -4,6 +4,18 @@ body {
   display: flex;
   font-family: $base-font;
   color: $base-text-color;
-  text-shadow: 2px 2px 2px black;
-  background-color: $bg-color;
+  background-color: $body-bg-color;
+}
+
+.link {
+  display: inline-flex;
+  justify-content: center;
+  margin: $link-margin;
+
+  color: $base-text-color;
+  text-decoration: none;
+  font-size: 20px;
+}
+.link:hover {
+  color: white;
 }
