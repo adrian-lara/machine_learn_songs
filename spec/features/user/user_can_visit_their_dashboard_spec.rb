@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "As a logged in user, when I visit my dashboard" do
   it "then I see my spotify username, and I can see the song I'm currently playing on Spotify" do
-    VCR.use_cassette("user_dashboard") do
+    VCR.use_cassette("user_visits_dashboard_playing_song_juke_jam") do
       user = create(:user,
         uid: "aid",
         access_token: ENV["access_token"],
@@ -16,15 +16,15 @@ describe "As a logged in user, when I visit my dashboard" do
       expect(current_path).to eq(dashboard_path)
       expect(page).to have_content(user.uid)
       within(".currently-playing") do
-        expect(page).to have_css("img[src='https://i.scdn.co/image/70429aaeceb7f8f6c087133382728223e0004b29']")
+        expect(page).to have_css("img[src='https://i.scdn.co/image/4df3b334d17428ba101ac867e6f97a0196af1635']")
         within(".artists") do
-          expect(page).to have_content("Kendrick Lamar")
+          expect(page).to have_content("Chance The Rapper, Justin Bieber, Towkio")
         end
         within(".song-title") do
-          expect(page).to have_content("LUST.")
+          expect(page).to have_content("Juke Jam")
         end
         within(".album-title") do
-          expect(page).to have_content("DAMN")
+          expect(page).to have_content("Coloring Book")
         end
       end
     end
