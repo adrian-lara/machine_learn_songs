@@ -28,7 +28,7 @@ describe "As a registered user (that's currently playing a song on Spotify) that
         expect(TrackCharacter.count).to eq(track_before_count + 1)
         expect(UserTrackCharacter.count).to eq(user_track_before_count + 1)
 
-        track_character = TrackCharacter.find_by(track_id: "4PpuH4mxL0rD35mOWaLoKS")
+        track_character = TrackCharacter.last
         expect(track_character.user_track_characters.first.assessment).to eq("Like")
       end
     end
