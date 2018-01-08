@@ -15,7 +15,7 @@ describe Song do
             images: [{ url: "https://i.scdn.co/image/70429aaeceb7f8f6c087133382728223e0004b29" }]
           },
         }
-      })
+      }, create(:user))
     end
 
     describe "#track_id" do
