@@ -10,7 +10,7 @@ class Users::DashboardController < ApplicationController
 
     unless response.body.empty?
       raw_song_data = JSON.parse(response.body, symbolize_names: true)
-      @song = Song.new(raw_song_data)
+      @song = Song.new(raw_song_data, current_user)
     end
   end
 
