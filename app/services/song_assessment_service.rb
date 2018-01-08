@@ -1,11 +1,17 @@
 class SongAssessmentService
 
-  def self.assess(data, user, assessment)
+  def self.assess(user, track_id, assessment)
+    data = get_audio_features(user, track_id)
     track_character = create_track_character(data)
     create_user_track_character(track_character, user, assessment)
   end
 
   private
+
+    def self.get_audio_features(user, track_id)
+      service = SpotifyService.new(user)
+      service.get_audio_features(track_id)
+    end
 
     def self.create_track_character(data)
       TrackCharacter.create({
