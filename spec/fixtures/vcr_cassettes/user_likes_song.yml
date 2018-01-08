@@ -1,0 +1,346 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spotify.com/v1/me/player/currently-playing
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Bearer <access_token>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 08 Jan 2018 01:12:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=600
+      Cache-Control:
+      - private, max-age=0
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '604800'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Origin, Content-Type
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJ0aW1lc3RhbXAiIDogMTUxNTM3MzgwNzE2OSwKICAicHJvZ3Jlc3Nf
+        bXMiIDogMTcyMDI3LAogICJpc19wbGF5aW5nIiA6IHRydWUsCiAgIml0ZW0i
+        IDogewogICAgImFsYnVtIiA6IHsKICAgICAgImFsYnVtX3R5cGUiIDogImFs
+        YnVtIiwKICAgICAgImFydGlzdHMiIDogWyB7CiAgICAgICAgImV4dGVybmFs
+        X3VybHMiIDogewogICAgICAgICAgInNwb3RpZnkiIDogImh0dHBzOi8vb3Bl
+        bi5zcG90aWZ5LmNvbS9hcnRpc3QvNXdQb3hJNXNpM2VKc1lZd3lYVjRXaSIK
+        ICAgICAgICB9LAogICAgICAgICJocmVmIiA6ICJodHRwczovL2FwaS5zcG90
+        aWZ5LmNvbS92MS9hcnRpc3RzLzV3UG94STVzaTNlSnNZWXd5WFY0V2kiLAog
+        ICAgICAgICJpZCIgOiAiNXdQb3hJNXNpM2VKc1lZd3lYVjRXaSIsCiAgICAg
+        ICAgIm5hbWUiIDogIk4uRS5SLkQiLAogICAgICAgICJ0eXBlIiA6ICJhcnRp
+        c3QiLAogICAgICAgICJ1cmkiIDogInNwb3RpZnk6YXJ0aXN0OjV3UG94STVz
+        aTNlSnNZWXd5WFY0V2kiCiAgICAgIH0gXSwKICAgICAgImF2YWlsYWJsZV9t
+        YXJrZXRzIiA6IFsgIkFEIiwgIkFSIiwgIkFUIiwgIkFVIiwgIkJFIiwgIkJH
+        IiwgIkJPIiwgIkJSIiwgIkNBIiwgIkNIIiwgIkNMIiwgIkNPIiwgIkNSIiwg
+        IkNZIiwgIkNaIiwgIkRFIiwgIkRLIiwgIkRPIiwgIkVDIiwgIkVFIiwgIkVT
+        IiwgIkZJIiwgIkZSIiwgIkdCIiwgIkdSIiwgIkdUIiwgIkhLIiwgIkhOIiwg
+        IkhVIiwgIklEIiwgIklFIiwgIklTIiwgIklUIiwgIkpQIiwgIkxJIiwgIkxU
+        IiwgIkxVIiwgIkxWIiwgIk1DIiwgIk1UIiwgIk1YIiwgIk1ZIiwgIk5JIiwg
+        Ik5MIiwgIk5PIiwgIk5aIiwgIlBBIiwgIlBFIiwgIlBIIiwgIlBMIiwgIlBU
+        IiwgIlBZIiwgIlNFIiwgIlNHIiwgIlNLIiwgIlNWIiwgIlRSIiwgIlRXIiwg
+        IlVTIiwgIlVZIiBdLAogICAgICAiZXh0ZXJuYWxfdXJscyIgOiB7CiAgICAg
+        ICAgInNwb3RpZnkiIDogImh0dHBzOi8vb3Blbi5zcG90aWZ5LmNvbS9hbGJ1
+        bS81NE9YYUZkMFB0R3RBZ2F1VG1BUmtEIgogICAgICB9LAogICAgICAiaHJl
+        ZiIgOiAiaHR0cHM6Ly9hcGkuc3BvdGlmeS5jb20vdjEvYWxidW1zLzU0T1hh
+        RmQwUHRHdEFnYXVUbUFSa0QiLAogICAgICAiaWQiIDogIjU0T1hhRmQwUHRH
+        dEFnYXVUbUFSa0QiLAogICAgICAiaW1hZ2VzIiA6IFsgewogICAgICAgICJo
+        ZWlnaHQiIDogNjQwLAogICAgICAgICJ1cmwiIDogImh0dHBzOi8vaS5zY2Ru
+        LmNvL2ltYWdlLzhiYzc2YzYxOTRlMTI3NmE3Nzc4YjE5OTUxOGQyYmMwM2Ix
+        MGVjZjMiLAogICAgICAgICJ3aWR0aCIgOiA2NDAKICAgICAgfSwgewogICAg
+        ICAgICJoZWlnaHQiIDogMzAwLAogICAgICAgICJ1cmwiIDogImh0dHBzOi8v
+        aS5zY2RuLmNvL2ltYWdlL2E2ZTc2OGY5ZTQ0ZDBhMGQ5MjE1NTE2OTE4OTky
+        NGQyZTkyNmE1ZDUiLAogICAgICAgICJ3aWR0aCIgOiAzMDAKICAgICAgfSwg
+        ewogICAgICAgICJoZWlnaHQiIDogNjQsCiAgICAgICAgInVybCIgOiAiaHR0
+        cHM6Ly9pLnNjZG4uY28vaW1hZ2UvN2RjYjE1ZjczMTQ2NTVkOTY2OTYyZTYw
+        MTBiZWQzOWVlNjA0ZDg0YiIsCiAgICAgICAgIndpZHRoIiA6IDY0CiAgICAg
+        IH0gXSwKICAgICAgIm5hbWUiIDogIk5PIE9ORSBFVkVSIFJFQUxMWSBESUVT
+        IiwKICAgICAgInR5cGUiIDogImFsYnVtIiwKICAgICAgInVyaSIgOiAic3Bv
+        dGlmeTphbGJ1bTo1NE9YYUZkMFB0R3RBZ2F1VG1BUmtEIgogICAgfSwKICAg
+        ICJhcnRpc3RzIiA6IFsgewogICAgICAiZXh0ZXJuYWxfdXJscyIgOiB7CiAg
+        ICAgICAgInNwb3RpZnkiIDogImh0dHBzOi8vb3Blbi5zcG90aWZ5LmNvbS9h
+        cnRpc3QvNXdQb3hJNXNpM2VKc1lZd3lYVjRXaSIKICAgICAgfSwKICAgICAg
+        ImhyZWYiIDogImh0dHBzOi8vYXBpLnNwb3RpZnkuY29tL3YxL2FydGlzdHMv
+        NXdQb3hJNXNpM2VKc1lZd3lYVjRXaSIsCiAgICAgICJpZCIgOiAiNXdQb3hJ
+        NXNpM2VKc1lZd3lYVjRXaSIsCiAgICAgICJuYW1lIiA6ICJOLkUuUi5EIiwK
+        ICAgICAgInR5cGUiIDogImFydGlzdCIsCiAgICAgICJ1cmkiIDogInNwb3Rp
+        Znk6YXJ0aXN0OjV3UG94STVzaTNlSnNZWXd5WFY0V2kiCiAgICB9LCB7CiAg
+        ICAgICJleHRlcm5hbF91cmxzIiA6IHsKICAgICAgICAic3BvdGlmeSIgOiAi
+        aHR0cHM6Ly9vcGVuLnNwb3RpZnkuY29tL2FydGlzdC83NFYzZEUxYTUxc2tS
+        a2RJSTh5MkM2IgogICAgICB9LAogICAgICAiaHJlZiIgOiAiaHR0cHM6Ly9h
+        cGkuc3BvdGlmeS5jb20vdjEvYXJ0aXN0cy83NFYzZEUxYTUxc2tSa2RJSTh5
+        MkM2IiwKICAgICAgImlkIiA6ICI3NFYzZEUxYTUxc2tSa2RJSTh5MkM2IiwK
+        ICAgICAgIm5hbWUiIDogIkFuZHLDqSAzMDAwIiwKICAgICAgInR5cGUiIDog
+        ImFydGlzdCIsCiAgICAgICJ1cmkiIDogInNwb3RpZnk6YXJ0aXN0Ojc0VjNk
+        RTFhNTFza1JrZElJOHkyQzYiCiAgICB9IF0sCiAgICAiYXZhaWxhYmxlX21h
+        cmtldHMiIDogWyAiQUQiLCAiQVIiLCAiQVQiLCAiQVUiLCAiQkUiLCAiQkci
+        LCAiQk8iLCAiQlIiLCAiQ0EiLCAiQ0giLCAiQ0wiLCAiQ08iLCAiQ1IiLCAi
+        Q1kiLCAiQ1oiLCAiREUiLCAiREsiLCAiRE8iLCAiRUMiLCAiRUUiLCAiRVMi
+        LCAiRkkiLCAiRlIiLCAiR0IiLCAiR1IiLCAiR1QiLCAiSEsiLCAiSE4iLCAi
+        SFUiLCAiSUQiLCAiSUUiLCAiSVMiLCAiSVQiLCAiSlAiLCAiTEkiLCAiTFQi
+        LCAiTFUiLCAiTFYiLCAiTUMiLCAiTVQiLCAiTVgiLCAiTVkiLCAiTkkiLCAi
+        TkwiLCAiTk8iLCAiTloiLCAiUEEiLCAiUEUiLCAiUEgiLCAiUEwiLCAiUFQi
+        LCAiUFkiLCAiU0UiLCAiU0ciLCAiU0siLCAiU1YiLCAiVFIiLCAiVFciLCAi
+        VVMiLCAiVVkiIF0sCiAgICAiZGlzY19udW1iZXIiIDogMSwKICAgICJkdXJh
+        dGlvbl9tcyIgOiAzMDk0NTMsCiAgICAiZXhwbGljaXQiIDogdHJ1ZSwKICAg
+        ICJleHRlcm5hbF9pZHMiIDogewogICAgICAiaXNyYyIgOiAiVVNTTTExNzA3
+        NjMwIgogICAgfSwKICAgICJleHRlcm5hbF91cmxzIiA6IHsKICAgICAgInNw
+        b3RpZnkiIDogImh0dHBzOi8vb3Blbi5zcG90aWZ5LmNvbS90cmFjay81aEln
+        N0oxaTUwWExHN2JQS1FNNk81IgogICAgfSwKICAgICJocmVmIiA6ICJodHRw
+        czovL2FwaS5zcG90aWZ5LmNvbS92MS90cmFja3MvNWhJZzdKMWk1MFhMRzdi
+        UEtRTTZPNSIsCiAgICAiaWQiIDogIjVoSWc3SjFpNTBYTEc3YlBLUU02TzUi
+        LAogICAgIm5hbWUiIDogIlJvbGxpbmVtIDcncyIsCiAgICAicG9wdWxhcml0
+        eSIgOiA2MiwKICAgICJwcmV2aWV3X3VybCIgOiAiaHR0cHM6Ly9wLnNjZG4u
+        Y28vbXAzLXByZXZpZXcvNjBjZTAzNzRiYjliYTczZTMwOTJiMTA5OTdkOWZl
+        ODBjZTkzNTc2ND9jaWQ9PENMSUVOVF9JRD4iLAogICAgInRyYWNrX251bWJl
+        ciIgOiA4LAogICAgInR5cGUiIDogInRyYWNrIiwKICAgICJ1cmkiIDogInNw
+        b3RpZnk6dHJhY2s6NWhJZzdKMWk1MFhMRzdiUEtRTTZPNSIKICB9LAogICJj
+        b250ZXh0IiA6IHsKICAgICJleHRlcm5hbF91cmxzIiA6IHsKICAgICAgInNw
+        b3RpZnkiIDogImh0dHBzOi8vb3Blbi5zcG90aWZ5LmNvbS9hbGJ1bS81NE9Y
+        YUZkMFB0R3RBZ2F1VG1BUmtEIgogICAgfSwKICAgICJocmVmIiA6ICJodHRw
+        czovL2FwaS5zcG90aWZ5LmNvbS92MS9hbGJ1bXMvNTRPWGFGZDBQdEd0QWdh
+        dVRtQVJrRCIsCiAgICAidHlwZSIgOiAiYWxidW0iLAogICAgInVyaSIgOiAi
+        c3BvdGlmeTphbGJ1bTo1NE9YYUZkMFB0R3RBZ2F1VG1BUmtEIgogIH0KfQ==
+    http_version: 
+  recorded_at: Mon, 08 Jan 2018 01:12:59 GMT
+- request:
+    method: get
+    uri: https://api.spotify.com/v1/audio-features/5hIg7J1i50XLG7bPKQM6O5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Bearer <access_token>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 08 Jan 2018 01:12:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=600
+      Cache-Control:
+      - private, max-age=0
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '604800'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Origin, Content-Type
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "danceability" : 0.488,
+          "energy" : 0.684,
+          "key" : 0,
+          "loudness" : -5.630,
+          "mode" : 1,
+          "speechiness" : 0.357,
+          "acousticness" : 0.0962,
+          "instrumentalness" : 0.0000183,
+          "liveness" : 0.107,
+          "valence" : 0.284,
+          "tempo" : 200.038,
+          "type" : "audio_features",
+          "id" : "5hIg7J1i50XLG7bPKQM6O5",
+          "uri" : "spotify:track:5hIg7J1i50XLG7bPKQM6O5",
+          "track_href" : "https://api.spotify.com/v1/tracks/5hIg7J1i50XLG7bPKQM6O5",
+          "analysis_url" : "https://api.spotify.com/v1/audio-analysis/5hIg7J1i50XLG7bPKQM6O5",
+          "duration_ms" : 309453,
+          "time_signature" : 4
+        }
+    http_version: 
+  recorded_at: Mon, 08 Jan 2018 01:12:59 GMT
+- request:
+    method: get
+    uri: https://api.spotify.com/v1/me/player/currently-playing
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Authorization:
+      - Bearer <access_token>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 08 Jan 2018 01:12:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=600
+      Cache-Control:
+      - private, max-age=0
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '604800'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Origin, Content-Type
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJ0aW1lc3RhbXAiIDogMTUxNTM3MzgwNzE2OSwKICAicHJvZ3Jlc3Nf
+        bXMiIDogMTcyNTcxLAogICJpc19wbGF5aW5nIiA6IHRydWUsCiAgIml0ZW0i
+        IDogewogICAgImFsYnVtIiA6IHsKICAgICAgImFsYnVtX3R5cGUiIDogImFs
+        YnVtIiwKICAgICAgImFydGlzdHMiIDogWyB7CiAgICAgICAgImV4dGVybmFs
+        X3VybHMiIDogewogICAgICAgICAgInNwb3RpZnkiIDogImh0dHBzOi8vb3Bl
+        bi5zcG90aWZ5LmNvbS9hcnRpc3QvNXdQb3hJNXNpM2VKc1lZd3lYVjRXaSIK
+        ICAgICAgICB9LAogICAgICAgICJocmVmIiA6ICJodHRwczovL2FwaS5zcG90
+        aWZ5LmNvbS92MS9hcnRpc3RzLzV3UG94STVzaTNlSnNZWXd5WFY0V2kiLAog
+        ICAgICAgICJpZCIgOiAiNXdQb3hJNXNpM2VKc1lZd3lYVjRXaSIsCiAgICAg
+        ICAgIm5hbWUiIDogIk4uRS5SLkQiLAogICAgICAgICJ0eXBlIiA6ICJhcnRp
+        c3QiLAogICAgICAgICJ1cmkiIDogInNwb3RpZnk6YXJ0aXN0OjV3UG94STVz
+        aTNlSnNZWXd5WFY0V2kiCiAgICAgIH0gXSwKICAgICAgImF2YWlsYWJsZV9t
+        YXJrZXRzIiA6IFsgIkFEIiwgIkFSIiwgIkFUIiwgIkFVIiwgIkJFIiwgIkJH
+        IiwgIkJPIiwgIkJSIiwgIkNBIiwgIkNIIiwgIkNMIiwgIkNPIiwgIkNSIiwg
+        IkNZIiwgIkNaIiwgIkRFIiwgIkRLIiwgIkRPIiwgIkVDIiwgIkVFIiwgIkVT
+        IiwgIkZJIiwgIkZSIiwgIkdCIiwgIkdSIiwgIkdUIiwgIkhLIiwgIkhOIiwg
+        IkhVIiwgIklEIiwgIklFIiwgIklTIiwgIklUIiwgIkpQIiwgIkxJIiwgIkxU
+        IiwgIkxVIiwgIkxWIiwgIk1DIiwgIk1UIiwgIk1YIiwgIk1ZIiwgIk5JIiwg
+        Ik5MIiwgIk5PIiwgIk5aIiwgIlBBIiwgIlBFIiwgIlBIIiwgIlBMIiwgIlBU
+        IiwgIlBZIiwgIlNFIiwgIlNHIiwgIlNLIiwgIlNWIiwgIlRSIiwgIlRXIiwg
+        IlVTIiwgIlVZIiBdLAogICAgICAiZXh0ZXJuYWxfdXJscyIgOiB7CiAgICAg
+        ICAgInNwb3RpZnkiIDogImh0dHBzOi8vb3Blbi5zcG90aWZ5LmNvbS9hbGJ1
+        bS81NE9YYUZkMFB0R3RBZ2F1VG1BUmtEIgogICAgICB9LAogICAgICAiaHJl
+        ZiIgOiAiaHR0cHM6Ly9hcGkuc3BvdGlmeS5jb20vdjEvYWxidW1zLzU0T1hh
+        RmQwUHRHdEFnYXVUbUFSa0QiLAogICAgICAiaWQiIDogIjU0T1hhRmQwUHRH
+        dEFnYXVUbUFSa0QiLAogICAgICAiaW1hZ2VzIiA6IFsgewogICAgICAgICJo
+        ZWlnaHQiIDogNjQwLAogICAgICAgICJ1cmwiIDogImh0dHBzOi8vaS5zY2Ru
+        LmNvL2ltYWdlLzhiYzc2YzYxOTRlMTI3NmE3Nzc4YjE5OTUxOGQyYmMwM2Ix
+        MGVjZjMiLAogICAgICAgICJ3aWR0aCIgOiA2NDAKICAgICAgfSwgewogICAg
+        ICAgICJoZWlnaHQiIDogMzAwLAogICAgICAgICJ1cmwiIDogImh0dHBzOi8v
+        aS5zY2RuLmNvL2ltYWdlL2E2ZTc2OGY5ZTQ0ZDBhMGQ5MjE1NTE2OTE4OTky
+        NGQyZTkyNmE1ZDUiLAogICAgICAgICJ3aWR0aCIgOiAzMDAKICAgICAgfSwg
+        ewogICAgICAgICJoZWlnaHQiIDogNjQsCiAgICAgICAgInVybCIgOiAiaHR0
+        cHM6Ly9pLnNjZG4uY28vaW1hZ2UvN2RjYjE1ZjczMTQ2NTVkOTY2OTYyZTYw
+        MTBiZWQzOWVlNjA0ZDg0YiIsCiAgICAgICAgIndpZHRoIiA6IDY0CiAgICAg
+        IH0gXSwKICAgICAgIm5hbWUiIDogIk5PIE9ORSBFVkVSIFJFQUxMWSBESUVT
+        IiwKICAgICAgInR5cGUiIDogImFsYnVtIiwKICAgICAgInVyaSIgOiAic3Bv
+        dGlmeTphbGJ1bTo1NE9YYUZkMFB0R3RBZ2F1VG1BUmtEIgogICAgfSwKICAg
+        ICJhcnRpc3RzIiA6IFsgewogICAgICAiZXh0ZXJuYWxfdXJscyIgOiB7CiAg
+        ICAgICAgInNwb3RpZnkiIDogImh0dHBzOi8vb3Blbi5zcG90aWZ5LmNvbS9h
+        cnRpc3QvNXdQb3hJNXNpM2VKc1lZd3lYVjRXaSIKICAgICAgfSwKICAgICAg
+        ImhyZWYiIDogImh0dHBzOi8vYXBpLnNwb3RpZnkuY29tL3YxL2FydGlzdHMv
+        NXdQb3hJNXNpM2VKc1lZd3lYVjRXaSIsCiAgICAgICJpZCIgOiAiNXdQb3hJ
+        NXNpM2VKc1lZd3lYVjRXaSIsCiAgICAgICJuYW1lIiA6ICJOLkUuUi5EIiwK
+        ICAgICAgInR5cGUiIDogImFydGlzdCIsCiAgICAgICJ1cmkiIDogInNwb3Rp
+        Znk6YXJ0aXN0OjV3UG94STVzaTNlSnNZWXd5WFY0V2kiCiAgICB9LCB7CiAg
+        ICAgICJleHRlcm5hbF91cmxzIiA6IHsKICAgICAgICAic3BvdGlmeSIgOiAi
+        aHR0cHM6Ly9vcGVuLnNwb3RpZnkuY29tL2FydGlzdC83NFYzZEUxYTUxc2tS
+        a2RJSTh5MkM2IgogICAgICB9LAogICAgICAiaHJlZiIgOiAiaHR0cHM6Ly9h
+        cGkuc3BvdGlmeS5jb20vdjEvYXJ0aXN0cy83NFYzZEUxYTUxc2tSa2RJSTh5
+        MkM2IiwKICAgICAgImlkIiA6ICI3NFYzZEUxYTUxc2tSa2RJSTh5MkM2IiwK
+        ICAgICAgIm5hbWUiIDogIkFuZHLDqSAzMDAwIiwKICAgICAgInR5cGUiIDog
+        ImFydGlzdCIsCiAgICAgICJ1cmkiIDogInNwb3RpZnk6YXJ0aXN0Ojc0VjNk
+        RTFhNTFza1JrZElJOHkyQzYiCiAgICB9IF0sCiAgICAiYXZhaWxhYmxlX21h
+        cmtldHMiIDogWyAiQUQiLCAiQVIiLCAiQVQiLCAiQVUiLCAiQkUiLCAiQkci
+        LCAiQk8iLCAiQlIiLCAiQ0EiLCAiQ0giLCAiQ0wiLCAiQ08iLCAiQ1IiLCAi
+        Q1kiLCAiQ1oiLCAiREUiLCAiREsiLCAiRE8iLCAiRUMiLCAiRUUiLCAiRVMi
+        LCAiRkkiLCAiRlIiLCAiR0IiLCAiR1IiLCAiR1QiLCAiSEsiLCAiSE4iLCAi
+        SFUiLCAiSUQiLCAiSUUiLCAiSVMiLCAiSVQiLCAiSlAiLCAiTEkiLCAiTFQi
+        LCAiTFUiLCAiTFYiLCAiTUMiLCAiTVQiLCAiTVgiLCAiTVkiLCAiTkkiLCAi
+        TkwiLCAiTk8iLCAiTloiLCAiUEEiLCAiUEUiLCAiUEgiLCAiUEwiLCAiUFQi
+        LCAiUFkiLCAiU0UiLCAiU0ciLCAiU0siLCAiU1YiLCAiVFIiLCAiVFciLCAi
+        VVMiLCAiVVkiIF0sCiAgICAiZGlzY19udW1iZXIiIDogMSwKICAgICJkdXJh
+        dGlvbl9tcyIgOiAzMDk0NTMsCiAgICAiZXhwbGljaXQiIDogdHJ1ZSwKICAg
+        ICJleHRlcm5hbF9pZHMiIDogewogICAgICAiaXNyYyIgOiAiVVNTTTExNzA3
+        NjMwIgogICAgfSwKICAgICJleHRlcm5hbF91cmxzIiA6IHsKICAgICAgInNw
+        b3RpZnkiIDogImh0dHBzOi8vb3Blbi5zcG90aWZ5LmNvbS90cmFjay81aEln
+        N0oxaTUwWExHN2JQS1FNNk81IgogICAgfSwKICAgICJocmVmIiA6ICJodHRw
+        czovL2FwaS5zcG90aWZ5LmNvbS92MS90cmFja3MvNWhJZzdKMWk1MFhMRzdi
+        UEtRTTZPNSIsCiAgICAiaWQiIDogIjVoSWc3SjFpNTBYTEc3YlBLUU02TzUi
+        LAogICAgIm5hbWUiIDogIlJvbGxpbmVtIDcncyIsCiAgICAicG9wdWxhcml0
+        eSIgOiA2MiwKICAgICJwcmV2aWV3X3VybCIgOiAiaHR0cHM6Ly9wLnNjZG4u
+        Y28vbXAzLXByZXZpZXcvNjBjZTAzNzRiYjliYTczZTMwOTJiMTA5OTdkOWZl
+        ODBjZTkzNTc2ND9jaWQ9PENMSUVOVF9JRD4iLAogICAgInRyYWNrX251bWJl
+        ciIgOiA4LAogICAgInR5cGUiIDogInRyYWNrIiwKICAgICJ1cmkiIDogInNw
+        b3RpZnk6dHJhY2s6NWhJZzdKMWk1MFhMRzdiUEtRTTZPNSIKICB9LAogICJj
+        b250ZXh0IiA6IHsKICAgICJleHRlcm5hbF91cmxzIiA6IHsKICAgICAgInNw
+        b3RpZnkiIDogImh0dHBzOi8vb3Blbi5zcG90aWZ5LmNvbS9hbGJ1bS81NE9Y
+        YUZkMFB0R3RBZ2F1VG1BUmtEIgogICAgfSwKICAgICJocmVmIiA6ICJodHRw
+        czovL2FwaS5zcG90aWZ5LmNvbS92MS9hbGJ1bXMvNTRPWGFGZDBQdEd0QWdh
+        dVRtQVJrRCIsCiAgICAidHlwZSIgOiAiYWxidW0iLAogICAgInVyaSIgOiAi
+        c3BvdGlmeTphbGJ1bTo1NE9YYUZkMFB0R3RBZ2F1VG1BUmtEIgogIH0KfQ==
+    http_version: 
+  recorded_at: Mon, 08 Jan 2018 01:12:59 GMT
+recorded_with: VCR 4.0.0
