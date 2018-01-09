@@ -41,8 +41,8 @@ ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
 
   config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with(:truncation)
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean
   end
 
   config.include FactoryBot::Syntax::Methods
