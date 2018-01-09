@@ -32,5 +32,34 @@ describe User do
         expect(user.token_type).to eq("Bearer")
       end
     end
+
+    describe "liked and disliked songs methods" do
+      before(:all) do
+        DatabaseCleaner.clean
+        @tc_1 = create(:track_character)
+        @tc_2 = create(:track_character)
+        @tc_3 = create(:track_character)
+        @user = create(:user)
+
+        create(:user_track_character, user: @user, track_character: @tc_1, assessment: 0)
+        create(:user_track_character, user: @user, track_character: @tc_2, assessment: 0)
+        create(:user_track_character, user: @user, track_character: @tc_3, assessment: 1)
+      end
+
+      describe "#liked_songs" do
+        it "returns all the TrackCharacters that've been liked by this user" do
+          expect(@user.liked_songs.count).to eq(2)
+          expect(@user.liked_songs).to include(@tc_1)
+          expect(@user.liked_songs).to include(@tc_2)
+        end
+      end
+
+      describe "#disliked_songs" do
+        it "returns all the TrackCharacters that've been disliked by this user" do
+          expect(@user.disliked_songs.count).to eq(1)
+          expect(@user.disliked_songs).to include(@tc_3)
+        end
+      end
+    end
   end
 end
