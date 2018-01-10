@@ -74,6 +74,8 @@ class Prediction
     end
 
     def normal_pdf(x, attr_params)
+      return 1 if attr_params[:variance] == 0
+      
       two_pi_variance = 2.0 * Math::PI * attr_params[:variance]
       sq_difference = (x - attr_params[:mean]) ** 2
       e_exponent = -0.5 * (sq_difference / attr_params[:variance])
