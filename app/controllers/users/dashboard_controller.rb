@@ -2,8 +2,8 @@ class Users::DashboardController < ApplicationController
   before_action :check_user
 
   def index
-    service = SpotifyService.new(current_user)
-    @song = service.currently_playing
+    creation_service = CreationService.new(current_user)
+    @song = creation_service.currently_playing_song
   end
 
 end
