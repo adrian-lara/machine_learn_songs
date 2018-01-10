@@ -53,9 +53,54 @@ describe Prediction do
           valence:              0.24
         )
         result = @prediction.result(very_dislikable_song)
-        expect(result).to be_a PredictionResult
+
         expect(result.like_score).to eq(0.0)
         expect(result.dislike_score).to eq(100.0)
+      end
+
+      it "returns PredictionResult for a perfectly balanced likable/dislikable song with like_score of 50.0 and a dislike_score of 50.0" do
+        balanced_song = TrackCharacter.new(
+          acousticness:         0.10,
+          danceability:         0.10,
+          duration_ms:          10,
+          energy:               0.10,
+          instrumentalness:     0.10,
+          key:                  10,
+          liveness:             0.50,
+          loudness:             0.90,
+          mode:                 90,
+          speechiness:          0.90,
+          tempo:                0.90,
+          time_signature:       90,
+          valence:              0.90
+        )
+        result = @prediction.result(balanced_song)
+
+        expect(result.like_score).to eq(50.0)
+        expect(result.dislike_score).to eq(50.0)
+      end
+
+      it "returns PredictionResult for a slightly more likable song with like_score > dislike_score" do
+        balanced_song = TrackCharacter.new(
+          acousticness:         0.10,
+          danceability:         0.10,
+          duration_ms:          10,
+          energy:               0.10,
+          instrumentalness:     0.10,
+          key:                  10,
+
+          liveness:             0.53,
+
+          loudness:             0.90,
+          mode:                 90,
+          speechiness:          0.90,
+          tempo:                0.90,
+          time_signature:       90,
+          valence:              0.90
+        )
+        result = @prediction.result(balanced_song)
+
+        expect(result.like_score > result.dislike_score).to eq(true)
       end
     end
   end
