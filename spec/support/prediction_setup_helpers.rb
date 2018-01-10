@@ -6,7 +6,9 @@ module PredictionSetupHelper
         danceability:         0.60,
         duration_ms:          60,
         energy:               0.60,
-        instrumentalness:     0.60,
+        
+        instrumentalness:     0,
+
         key:                  60,
         liveness:             0.60,
         loudness:             0.60,
@@ -21,7 +23,9 @@ module PredictionSetupHelper
         danceability:         0.70,
         duration_ms:          70,
         energy:               0.70,
-        instrumentalness:     0.70,
+        
+        instrumentalness:     0,
+
         key:                  70,
         liveness:             0.70,
         loudness:             0.70,
@@ -36,7 +40,9 @@ module PredictionSetupHelper
         danceability:         0.80,
         duration_ms:          80,
         energy:               0.80,
-        instrumentalness:     0.80,
+        
+        instrumentalness:     0,
+
         key:                  80,
         liveness:             0.80,
         loudness:             0.80,
@@ -51,7 +57,9 @@ module PredictionSetupHelper
         danceability:         0.90,
         duration_ms:          90,
         energy:               0.90,
-        instrumentalness:     0.90,
+        
+        instrumentalness:     0,
+
         key:                  90,
         liveness:             0.90,
         loudness:             0.90,
@@ -70,7 +78,9 @@ module PredictionSetupHelper
         danceability:         0.10,
         duration_ms:          10,
         energy:               0.10,
-        instrumentalness:     0.10,
+        
+        instrumentalness:     0,
+
         key:                  10,
         liveness:             0.10,
         loudness:             0.10,
@@ -85,7 +95,9 @@ module PredictionSetupHelper
         danceability:         0.20,
         duration_ms:          20,
         energy:               0.20,
-        instrumentalness:     0.20,
+        
+        instrumentalness:     0,
+
         key:                  20,
         liveness:             0.20,
         loudness:             0.20,
@@ -100,7 +112,9 @@ module PredictionSetupHelper
         danceability:         0.30,
         duration_ms:          30,
         energy:               0.30,
-        instrumentalness:     0.30,
+        
+        instrumentalness:     0,
+
         key:                  30,
         liveness:             0.30,
         loudness:             0.30,
@@ -115,7 +129,9 @@ module PredictionSetupHelper
         danceability:         0.40,
         duration_ms:          40,
         energy:               0.40,
-        instrumentalness:     0.40,
+        
+        instrumentalness:     0,
+
         key:                  40,
         liveness:             0.40,
         loudness:             0.40,
