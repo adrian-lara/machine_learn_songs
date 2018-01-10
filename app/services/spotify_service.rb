@@ -11,7 +11,9 @@ class SpotifyService
       req.headers['Authorization'] = "Bearer #{user.access_token}"
     end
 
-    create_song(response) unless response.body.empty?
+    unless response.body.empty?
+      JSON.parse(response.body, symbolize_names: true)
+    end
   end
 
   def get_audio_features(track_id)
@@ -27,8 +29,4 @@ class SpotifyService
 
     attr_reader :conn, :user
 
-    def create_song(response)
-      raw_song_data = JSON.parse(response.body, symbolize_names: true)
-      @song = Song.new(raw_song_data, user)
-    end
 end
