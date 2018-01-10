@@ -4,7 +4,6 @@ describe "As a registered user (playing a song on Spotify and having liked and d
   describe "when I visit the '/predict' page" do
     it "Then I see the currently playing song and result of the rating" do
       VCR.use_cassette("user_visits_predict_page") do
-        Capybara.asset_host = "http://localhost:3000/"
         DatabaseCleaner.clean
         liked_songs = PredictionSetupHelper.create_four_liked_realisitic_songs
         disliked_songs = PredictionSetupHelper.create_four_disliked_realistic_songs
