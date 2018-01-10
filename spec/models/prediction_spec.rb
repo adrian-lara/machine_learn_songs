@@ -64,9 +64,12 @@ describe Prediction do
           danceability:         0.10,
           duration_ms:          10,
           energy:               0.10,
-          instrumentalness:     0.10,
+
+          instrumentalness:     0,
+
           key:                  10,
-          liveness:             0.50,
+          liveness:             0.10,
+
           loudness:             0.90,
           mode:                 90,
           speechiness:          0.90,
