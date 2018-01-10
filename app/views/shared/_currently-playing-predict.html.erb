@@ -1,0 +1,6 @@
+<div class="predict-section">
+  <% if @song.assessment %>
+    <span>Just a heads up, you <%= @song.assessment %>d this song!</span>
+  <% end %>
+  <%= link_to "Predict", predict_path, class: "link predict-link" %>
+</div>

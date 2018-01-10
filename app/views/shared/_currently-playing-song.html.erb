@@ -1,0 +1,6 @@
+<%= image_tag @song.album_cover, class: "album-cover" %>
+<div class="track-info">
+  <div class="track-info-contents artists"><%= @song.artists %></div>
+  <div class="track-info-contents album-title"><%= @song.album %></div>
+  <div class="track-info-contents song-title"><%= @song.title %></div>
+</div>
