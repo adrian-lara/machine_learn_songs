@@ -1,10 +1,11 @@
-<div class="dashboard">
-  <h3>Welcome <%= current_user.uid %>!</h4>
+<div class="user-page">
+  <h3>Logged in as <%= current_user.uid %>!</h4>
 
   <h5>Currently Playing</h5>
   <div class="currently-playing">
     <% if @song %>
-      <%= render partial: "currently-playing" %>
+      <%= render partial: "shared/currently-playing-song" %>
+      <%= render partial: "shared/currently-playing-like-dislike" %>
     <% else %>
       <%= "Play a song on Spotify!" %>
     <% end %>
