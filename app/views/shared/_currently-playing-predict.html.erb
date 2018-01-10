@@ -2,5 +2,8 @@
   <% if @song.assessment %>
     <span class="assessed-note">Just a heads up, you "<%= @song.assessment %>d" this song!</span>
   <% end %>
-  <%= link_to "Predict", predict_path, class: "link predict-link" %>
+  <span class="prediction-result">
+    <p><%= @result.like_score %>% you'll like it!</p>
+    <p><%= @result.dislike_score %>% you'll dislike it!</p>
+  </span>
 </div>
