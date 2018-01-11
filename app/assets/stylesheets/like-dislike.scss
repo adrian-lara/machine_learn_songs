@@ -1,0 +1,28 @@
+@import 'variables';
+
+.like-dislike {
+  height: 100%;
+  width: 20%;
+
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  .link {
+    padding: $like-dislike-padding;
+    border-radius: 1px;
+  }
+  .like-link:hover {
+    padding: ($like-dislike-padding + 2px);
+    margin: ($link-margin - 2px);
+  }
+  .like-link {
+    background-color: $spotify-green;
+  }
+  .dislike-link {
+    background-color: $reddish;
+  }
+  .dislike-link:hover {
+    padding: ($like-dislike-padding + 2px);
+    margin: ($link-margin - 2px);
+  }
+}

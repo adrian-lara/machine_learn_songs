@@ -1,0 +1,21 @@
+@import 'variables';
+
+.prediction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .assessed-note {
+    align-self: flex-start;
+    margin: 10px;
+    opacity: 0.5;
+    color: $spotify-green;
+    font-size: 15px;
+  }
+  .prediction-result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

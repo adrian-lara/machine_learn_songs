@@ -1,0 +1,18 @@
+@import 'variables';
+
+.track-info {
+  height: 100%;
+  width: 50%;
+
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  font-size: 20px;
+  margin: 10px;
+  .track-info-contents {
+    margin: 16px;
+  }
+  .album-title {
+    opacity: 0.6;
+  }
+}
