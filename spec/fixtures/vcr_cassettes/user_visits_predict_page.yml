@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 10 Jan 2018 21:05:17 GMT
+      - Thu, 11 Jan 2018 00:30:43 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -52,8 +52,8 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "timestamp" : 1515618308618,
-          "progress_ms" : 8886,
+          "timestamp" : 1515630565953,
+          "progress_ms" : 77577,
           "is_playing" : true,
           "item" : {
             "album" : {
@@ -141,7 +141,7 @@ http_interactions:
           "context" : null
         }
     http_version: 
-  recorded_at: Wed, 10 Jan 2018 21:05:17 GMT
+  recorded_at: Thu, 11 Jan 2018 00:30:43 GMT
 - request:
     method: get
     uri: https://api.spotify.com/v1/audio-features/3eze1OsZ1rqeXkKStNfTmi
@@ -165,7 +165,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 10 Jan 2018 21:05:17 GMT
+      - Thu, 11 Jan 2018 00:30:43 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -214,5 +214,5 @@ http_interactions:
           "time_signature" : 1
         }
     http_version: 
-  recorded_at: Wed, 10 Jan 2018 21:05:17 GMT
+  recorded_at: Thu, 11 Jan 2018 00:30:43 GMT
 recorded_with: VCR 4.0.0

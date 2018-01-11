@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 08 Jan 2018 06:44:13 GMT
+      - Thu, 11 Jan 2018 00:30:42 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -52,8 +52,8 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "timestamp" : 1515393655413,
-          "progress_ms" : 198013,
+          "timestamp" : 1515630565953,
+          "progress_ms" : 76852,
           "is_playing" : true,
           "item" : {
             "album" : {
@@ -138,17 +138,10 @@ http_interactions:
             "type" : "track",
             "uri" : "spotify:track:3eze1OsZ1rqeXkKStNfTmi"
           },
-          "context" : {
-            "external_urls" : {
-              "spotify" : "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DZ06evO0D4DBu"
-            },
-            "href" : "https://api.spotify.com/v1/users/spotify/playlists/37i9dQZF1DZ06evO0D4DBu",
-            "type" : "playlist",
-            "uri" : "spotify:user:spotify:playlist:37i9dQZF1DZ06evO0D4DBu"
-          }
+          "context" : null
         }
     http_version: 
-  recorded_at: Mon, 08 Jan 2018 06:44:13 GMT
+  recorded_at: Thu, 11 Jan 2018 00:30:42 GMT
 - request:
     method: get
     uri: https://api.spotify.com/v1/audio-features/3eze1OsZ1rqeXkKStNfTmi
@@ -172,7 +165,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 08 Jan 2018 06:44:13 GMT
+      - Thu, 11 Jan 2018 00:30:42 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -221,7 +214,7 @@ http_interactions:
           "time_signature" : 1
         }
     http_version: 
-  recorded_at: Mon, 08 Jan 2018 06:44:13 GMT
+  recorded_at: Thu, 11 Jan 2018 00:30:42 GMT
 - request:
     method: get
     uri: https://api.spotify.com/v1/me/player/currently-playing
@@ -245,7 +238,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 08 Jan 2018 06:44:13 GMT
+      - Thu, 11 Jan 2018 00:30:43 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -274,8 +267,8 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |-
         {
-          "timestamp" : 1515393655413,
-          "progress_ms" : 198403,
+          "timestamp" : 1515630565953,
+          "progress_ms" : 77128,
           "is_playing" : true,
           "item" : {
             "album" : {
@@ -360,15 +353,8 @@ http_interactions:
             "type" : "track",
             "uri" : "spotify:track:3eze1OsZ1rqeXkKStNfTmi"
           },
-          "context" : {
-            "external_urls" : {
-              "spotify" : "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DZ06evO0D4DBu"
-            },
-            "href" : "https://api.spotify.com/v1/users/spotify/playlists/37i9dQZF1DZ06evO0D4DBu",
-            "type" : "playlist",
-            "uri" : "spotify:user:spotify:playlist:37i9dQZF1DZ06evO0D4DBu"
-          }
+          "context" : null
         }
     http_version: 
-  recorded_at: Mon, 08 Jan 2018 06:44:13 GMT
+  recorded_at: Thu, 11 Jan 2018 00:30:43 GMT
 recorded_with: VCR 4.0.0
