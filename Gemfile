@@ -28,6 +28,7 @@ group :development, :test do
   gem 'webmock'
   gem 'bullet'
   gem 'database_cleaner'
+  gem 'simplecov'
 end
 
 group :development do
