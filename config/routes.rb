@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   delete '/logout', to: "session#destroy", as: :logout
 
   get "/predict", to: "users/predict#index", as: :predict
-  get "/dashboard", to: "users/dashboard#index", as: :dashboard
+  get "/learn", to: "users/learn#index", as: :learn
 
   post "/track_characters", to: "users/track_characters#create", as: :save_track
 
