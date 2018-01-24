@@ -4,7 +4,7 @@ class Users::TrackCharactersController < ApplicationController
     creation_service = CreationService.new(current_user)
     creation_service.song_assessment(current_user, params[:track_id], params[:assessment])
 
-    redirect_to dashboard_path
+    redirect_to learn_path
   end
 
 end

@@ -1,4 +1,4 @@
-class Users::DashboardController < ApplicationController
+class Users::LearnController < ApplicationController
   before_action :check_user
 
   def index

@@ -24,7 +24,7 @@ class SessionController < ApplicationController
       )
 
       session[:user_id] = user.id
-      redirect_to dashboard_path
+      redirect_to learn_path
     else
       redirect_to root_path
     end
