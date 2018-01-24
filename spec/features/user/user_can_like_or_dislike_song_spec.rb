@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "As a registered user (that's currently playing a song on Spotify) that's on my dashboard" do
+describe "As a registered user (that's currently playing a song on Spotify) that's on my learn" do
   describe "And I click the 'Like' button for the song currently playing" do
     it "Then that track_id and spotify analytics are saved to TrackCharacters, and the 'Like' is saved to UserTrackCharacters" do
       VCR.use_cassette("user_likes_song") do
@@ -11,7 +11,7 @@ describe "As a registered user (that's currently playing a song on Spotify) that
 
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-        visit '/dashboard'
+        visit '/learn'
 
         within(".currently-playing") do
           within(".like-dislike") do
@@ -33,7 +33,7 @@ describe "As a registered user (that's currently playing a song on Spotify) that
       end
     end
 
-    it "Then I see 'Liked' instead of the Like and Dislike links, and I'm still on the dashboard" do
+    it "Then I see 'Liked' instead of the Like and Dislike links, and I'm still on the learn" do
       VCR.use_cassette("user_likes_song") do
         user = create(:user,
           access_token: ENV['access_token'],
@@ -42,7 +42,7 @@ describe "As a registered user (that's currently playing a song on Spotify) that
 
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-        visit '/dashboard'
+        visit '/learn'
         click_on "Like"
 
         within(".currently-playing") do
@@ -53,7 +53,7 @@ describe "As a registered user (that's currently playing a song on Spotify) that
           end
         end
 
-        expect(current_path).to eq(dashboard_path)
+        expect(current_path).to eq(learn_path)
       end
     end
   end
@@ -68,7 +68,7 @@ describe "As a registered user (that's currently playing a song on Spotify) that
 
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-        visit '/dashboard'
+        visit '/learn'
 
         track_before_count = TrackCharacter.count
         user_track_before_count = UserTrackCharacter.count
@@ -83,7 +83,7 @@ describe "As a registered user (that's currently playing a song on Spotify) that
       end
     end
 
-    it "Then I see 'Liked' instead of the Like and Dislike links, and I'm still on the dashboard" do
+    it "Then I see 'Liked' instead of the Like and Dislike links, and I'm still on the learn" do
       VCR.use_cassette("user_dislikes_song") do
         user = create(:user,
           access_token: ENV['access_token'],
@@ -92,7 +92,7 @@ describe "As a registered user (that's currently playing a song on Spotify) that
 
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-        visit '/dashboard'
+        visit '/learn'
         click_on "Dislike"
 
         within(".currently-playing") do
@@ -103,7 +103,7 @@ describe "As a registered user (that's currently playing a song on Spotify) that
           end
         end
 
-        expect(current_path).to eq(dashboard_path)
+        expect(current_path).to eq(learn_path)
       end
     end
   end

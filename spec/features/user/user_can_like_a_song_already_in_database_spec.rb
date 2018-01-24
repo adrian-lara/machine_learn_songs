@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "As a registered user (that's currently playing a song on Spotify) that's on my dashboard" do
+describe "As a registered user (that's currently playing a song on Spotify) that's on my learn" do
   describe "And I click the 'Like' button for the song currently playing which has already been saved to the database" do
     it "Then a new TrackCharacter record is NOT created, but the 'Like' is saved to UserTrackCharacters" do
       VCR.use_cassette("user_likes_song_already_in_database") do
@@ -11,7 +11,7 @@ describe "As a registered user (that's currently playing a song on Spotify) that
 
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-        visit '/dashboard'
+        visit '/learn'
 
         TrackCharacter.create(track_id: "3eze1OsZ1rqeXkKStNfTmi")
 
