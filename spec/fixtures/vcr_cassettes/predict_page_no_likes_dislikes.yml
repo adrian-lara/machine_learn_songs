@@ -1,0 +1,219 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spotify.com/v1/me/player/currently-playing
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Authorization:
+      - Bearer <access_token>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 05 Apr 2018 18:44:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1109'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=600
+      Cache-Control:
+      - private, max-age=0
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Origin, Content-Type, Retry-After
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, PUT, DELETE, PATCH
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '604800'
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "timestamp" : 1522953798210,
+          "progress_ms" : 50384,
+          "is_playing" : true,
+          "item" : {
+            "album" : {
+              "album_type" : "single",
+              "artists" : [ {
+                "external_urls" : {
+                  "spotify" : "https://open.spotify.com/artist/53KwLdlmrlCelAZMaLVZqU"
+                },
+                "href" : "https://api.spotify.com/v1/artists/53KwLdlmrlCelAZMaLVZqU",
+                "id" : "53KwLdlmrlCelAZMaLVZqU",
+                "name" : "James Blake",
+                "type" : "artist",
+                "uri" : "spotify:artist:53KwLdlmrlCelAZMaLVZqU"
+              } ],
+              "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+              "external_urls" : {
+                "spotify" : "https://open.spotify.com/album/0ANdqQgp2MC1RrulIIP9wk"
+              },
+              "href" : "https://api.spotify.com/v1/albums/0ANdqQgp2MC1RrulIIP9wk",
+              "id" : "0ANdqQgp2MC1RrulIIP9wk",
+              "images" : [ {
+                "height" : 640,
+                "url" : "https://i.scdn.co/image/ab5f886590b55260ef37217895294a3516b7f213",
+                "width" : 640
+              }, {
+                "height" : 300,
+                "url" : "https://i.scdn.co/image/d70c57f33d403daa611b4a01456c38353f052968",
+                "width" : 300
+              }, {
+                "height" : 64,
+                "url" : "https://i.scdn.co/image/4f38e875cf591d8c8abe2afa6432003b26ffabe0",
+                "width" : 64
+              } ],
+              "name" : "Life Round Here",
+              "release_date" : "2013-01-01",
+              "release_date_precision" : "day",
+              "type" : "album",
+              "uri" : "spotify:album:0ANdqQgp2MC1RrulIIP9wk"
+            },
+            "artists" : [ {
+              "external_urls" : {
+                "spotify" : "https://open.spotify.com/artist/53KwLdlmrlCelAZMaLVZqU"
+              },
+              "href" : "https://api.spotify.com/v1/artists/53KwLdlmrlCelAZMaLVZqU",
+              "id" : "53KwLdlmrlCelAZMaLVZqU",
+              "name" : "James Blake",
+              "type" : "artist",
+              "uri" : "spotify:artist:53KwLdlmrlCelAZMaLVZqU"
+            }, {
+              "external_urls" : {
+                "spotify" : "https://open.spotify.com/artist/1anyVhU62p31KFi8MEzkbf"
+              },
+              "href" : "https://api.spotify.com/v1/artists/1anyVhU62p31KFi8MEzkbf",
+              "id" : "1anyVhU62p31KFi8MEzkbf",
+              "name" : "Chance The Rapper",
+              "type" : "artist",
+              "uri" : "spotify:artist:1anyVhU62p31KFi8MEzkbf"
+            } ],
+            "available_markets" : [ "AD", "AR", "AT", "AU", "BE", "BG", "BO", "BR", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "EC", "EE", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HU", "ID", "IE", "IS", "IT", "JP", "LI", "LT", "LU", "LV", "MC", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "PA", "PE", "PH", "PL", "PT", "PY", "SE", "SG", "SK", "SV", "TR", "TW", "US", "UY" ],
+            "disc_number" : 1,
+            "duration_ms" : 188713,
+            "explicit" : false,
+            "external_ids" : {
+              "isrc" : "GBUM71306853"
+            },
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/track/0fq2N4qK5B4mDuVx9FTpkc"
+            },
+            "href" : "https://api.spotify.com/v1/tracks/0fq2N4qK5B4mDuVx9FTpkc",
+            "id" : "0fq2N4qK5B4mDuVx9FTpkc",
+            "is_local" : false,
+            "name" : "Life Round Here",
+            "popularity" : 52,
+            "preview_url" : "https://p.scdn.co/mp3-preview/c5d7a3119e930fe6f588e20305cbaa82e718ff54?cid=<CLIENT_ID>",
+            "track_number" : 1,
+            "type" : "track",
+            "uri" : "spotify:track:0fq2N4qK5B4mDuVx9FTpkc"
+          },
+          "context" : {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DZ06evO0D4DBu"
+            },
+            "href" : "https://api.spotify.com/v1/users/spotify/playlists/37i9dQZF1DZ06evO0D4DBu",
+            "type" : "playlist",
+            "uri" : "spotify:user:spotify:playlist:37i9dQZF1DZ06evO0D4DBu"
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 05 Apr 2018 18:44:08 GMT
+- request:
+    method: get
+    uri: https://api.spotify.com/v1/audio-features/0fq2N4qK5B4mDuVx9FTpkc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Authorization:
+      - Bearer <access_token>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 05 Apr 2018 18:44:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '303'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=600
+      Cache-Control:
+      - private, max-age=0
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Origin, Content-Type, Retry-After
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, PUT, DELETE, PATCH
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '604800'
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "danceability" : 0.432,
+          "energy" : 0.740,
+          "key" : 10,
+          "loudness" : -6.203,
+          "mode" : 0,
+          "speechiness" : 0.265,
+          "acousticness" : 0.685,
+          "instrumentalness" : 0.0518,
+          "liveness" : 0.122,
+          "valence" : 0.272,
+          "tempo" : 145.353,
+          "type" : "audio_features",
+          "id" : "0fq2N4qK5B4mDuVx9FTpkc",
+          "uri" : "spotify:track:0fq2N4qK5B4mDuVx9FTpkc",
+          "track_href" : "https://api.spotify.com/v1/tracks/0fq2N4qK5B4mDuVx9FTpkc",
+          "analysis_url" : "https://api.spotify.com/v1/audio-analysis/0fq2N4qK5B4mDuVx9FTpkc",
+          "duration_ms" : 188713,
+          "time_signature" : 4
+        }
+    http_version: 
+  recorded_at: Thu, 05 Apr 2018 18:44:09 GMT
+recorded_with: VCR 4.0.0

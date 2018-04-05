@@ -3,7 +3,11 @@
     <span class="assessed-note">Just a heads up, you "<%= @song.assessment %>d" this song!</span>
   <% end %>
   <span class="prediction-result">
-    <p><%= @result.like_score %>% you'll like it!</p>
-    <p><%= @result.dislike_score %>% you'll dislike it!</p>
+  <% if @result %>
+      <p><%= @result.like_score %>% you'll like it!</p>
+      <p><%= @result.dislike_score %>% you'll dislike it!</p>
+    <% else %>
+      <%= "Like and/or dislike some songs!" %>
+    <% end %>
   </span>
 </div>

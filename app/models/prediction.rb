@@ -5,6 +5,8 @@ class Prediction
   end
 
   def result(input_song)
+    return if user_songs_empty?
+
     prb_like = prb_like_given_song(input_song)
     prb_dislike = prb_dislike_given_song(input_song)
     PredictionResult.new(prb_like, prb_dislike)
@@ -13,6 +15,10 @@ class Prediction
   private
 
     attr_reader :user
+
+    def user_songs_empty?
+      liked_songs.empty? || disliked_songs.empty?
+    end
 
     def bayes_attributes
       @bayes_attributes ||= TrackCharacter.calculable_attributes
